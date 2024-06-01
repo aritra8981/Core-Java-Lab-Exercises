@@ -12,12 +12,19 @@ public class Emp {
 		Scanner sc = new Scanner(System.in); // Create a Scanner object for input
 		System.out.println("Enter Employee Number: ");
 		empno = sc.nextInt(); // Read integer input for employee number
+
+		// Consume the newline character left by nextInt()
+		sc.nextLine();
+
 		System.out.println("Enter Employee Name: ");
 		empname = sc.next(); // Read string input for employee name
+
 		System.out.println("Enter Designation: ");
 		designation = sc.next(); // Read string input for employee designation
+
 		System.out.println("Enter Department: ");
 		dept = sc.next(); // Read string input for employee department
+
 		System.out.println("Enter Salary: ");
 		salary = sc.nextInt(); // Read integer input for employee salary
 
