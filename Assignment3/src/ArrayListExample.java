@@ -4,48 +4,41 @@ import java.util.Iterator;
 
 public class ArrayListExample {
 	public static void main(String[] args) {
-
+		// Create an ArrayList of Integer type
 		ArrayList<Integer> al = new ArrayList<>();
 
-		// Creating Array List
+		// Add elements to the ArrayList
 		al.add(24);
 		al.add(14);
 		al.add(52);
 		al.add(11);
 		al.add(34);
 
-		// Display Array List
+		// Display the ArrayList using an iterator
 		System.out.println("Displaying Array");
-		Iterator it = al.iterator();
-
+		Iterator<Integer> it = al.iterator();
 		while (it.hasNext()) {
 			System.out.println(it.next());
 		}
 
-		// Update Array List
+		// Remove an element from the ArrayList
+		System.out.println("After Deleting");
+		int pos = al.indexOf(52); // Find the position of the element to be removed
+		al.remove(pos); // Remove the element at the found position
+		System.out.println(al);
+
+		// Update the first element of the ArrayList
 		System.out.println("After Update");
 		al.set(0, 55);
+		System.out.println(al);
 
-		for (Integer element : al) {
-			System.out.println(element);
-		}
-
-		// Deleting
-		System.out.println("After Deleting");
-		int pos = al.indexOf(52);
-		al.remove(pos);
-		for (Integer ele : al) {
-			System.out.println(ele);
-		}
-
-		int a = al.get(3);
+		// Retrieve an element from the ArrayList
+		int a = al.get(3); // Get the element at index 3
 		System.out.println(a);
 
+		// Sort the ArrayList
 		System.out.println("After Sorting: ");
-		Collections.sort(al);
-		for (Integer ele : al) {
-			System.out.println(ele);
-		}
-
+		Collections.sort(al); // Sort the ArrayList in ascending order
+		System.out.println(al);
 	}
 }

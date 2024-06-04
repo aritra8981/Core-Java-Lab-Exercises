@@ -1,25 +1,23 @@
-
 public class Book {
-	String name;
-	float price;
-	String author_name;
-	int isbnNo;
-	String publication;
+    String name; // Name of the book
+    double price; // Price of the book
+    String authorName; // Name of the author
+    String isbnNo; // ISBN number of the book
+    String publication; // Publication information
 
-	public Book(String name, float price, String author_name, int isbnNo, String publication) {
-		this.name = name;
-		this.price = price;
-		this.author_name = author_name;
-		this.isbnNo = isbnNo;
-		this.publication = publication;
-	}
+    // Constructor to initialize a Book object
+    public Book(String name, double price, String authorName, String isbnNo, String publication) {
+        this.name = name;
+        this.price = price;
+        this.authorName = authorName;
+        this.isbnNo = isbnNo;
+        this.publication = publication;
+    }
 
-	void displayBook() {
-		System.out.println("Book Name: " + name);
-		System.out.println("Book Price: " + price);
-		System.out.println("Book Author Name: " + author_name);
-		System.out.println("Book ISBN No.: " + isbnNo);
-		System.out.println("Book Publication: " + publication);
-	}
-
+    // Overriding the toString method to provide a string representation of a Book object
+    @Override
+    public String toString() {
+        return "[Book Name=" + name + ", price=" + price + ", Author Name=" + authorName + ", ISBN No=" + isbnNo
+                + ", Publication=" + publication + "]";
+    }
 }
