@@ -1,52 +1,42 @@
-import java.util.Scanner;
-
+// Subclass: SalariedEmployee extends Employee
 public class SalariedEmployee extends Employee {
-	double salary;
+    // Private field to store the fixed salary
+    private double salary;
 
-	public SalariedEmployee(int ssn, String firstName, String lastName, double salary) {
-		super(ssn, firstName, lastName);
-		this.salary = salary;
-	}
+    // Constructor to initialize SalariedEmployee with ssn, firstName, lastName, and salary
+    public SalariedEmployee(String ssn, String firstName, String lastName, double salary) {
+        // Call the constructor of the superclass Employee
+        super(ssn, firstName, lastName);
+        // Initialize the salary field
+        this.salary = salary;
+    }
 
-	public void computeGrossPay() {
-		Scanner s = new Scanner(System.in);
-		System.out.println("Enter Basic Salary: ");
-		double bsal = s.nextDouble();
-		System.out.println("Enter HRA: ");
-		double hra = s.nextDouble();
-		System.out.println("Enter DA: ");
-		double da = s.nextDouble();
+    // Getter method for salary
+    public double getSalary() {
+        return salary;
+    }
 
-		double grossSalary = bsal + hra + da;
+    // Setter method for salary
+    public void setSalary(double salary) {
+        this.salary = salary;
+    }
 
-		System.out.println("Your Gross Salary: " + grossSalary);
+    // Method to compute gross pay (for simplicity, assuming fixed salary)
+    public double computeGrossPay() {
+        return salary;
+    }
 
-		s.close();
+    // Method to compute net pay (in this example, it's the same as gross pay)
+    public double computeNetPay() {
+        return computeGrossPay();
+    }
 
-	}
-
-	public void computeNetPay() {
-		Scanner s = new Scanner(System.in);
-		System.out.println("Enter Gross Salary: ");
-		double grossSal = s.nextDouble();
-		System.out.println("Enter Your Income Tax: ");
-		double itax = s.nextDouble();
-		System.out.println("Enter Your PF: ");
-		double pf = s.nextDouble();
-		System.out.println("Enter Your PTax: ");
-		double ptax = s.nextDouble();
-
-		double netSal = grossSal - itax - pf - ptax;
-		System.out.println("Your Net Salary: " + netSal);
-
-		s.close();
-
-	}
-
-	public void displaySalEmp() {
-
-		System.out.println("Hourly Employee Details: ");
-		System.out.println("SSN: " + ssn);
-		System.out.println("Name: " + firstName + " " + lastName);
-	}
+    // Override the print method from the Employee class to include salary
+    @Override
+    public void print() {
+        // Call the print method of the superclass to print SSN, first name, and last name
+        super.print();
+        // Print the salary
+        System.out.println("Salary: " + salary);
+    }
 }

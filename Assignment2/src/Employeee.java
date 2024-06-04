@@ -1,11 +1,14 @@
-
+//Extending the Person class.
 public class Employeee extends Person {
 
-	public Employeee(String name, int age) {
-		super(name, age);
-	}
+    //Constructor for Employeee objects.
+    public Employeee(String name, int age) {
+        super(name, age);
+    }
 
-	public void myProfession() {
-		System.out.println(name + " is a Employee.");
-	}
+    
+    //Prints the profession of the employee.
+    public void myProfession() {
+        System.out.println(name + " is an Employee.");
+    }
 }

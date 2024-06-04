@@ -1,7 +1,8 @@
-
+// Car class representing a generic car
 public class Car {
-
-	public void speed() {
-		System.out.println("Car Generic Spead.");
-	}
+    
+    // Method to represent a generic speed of a car
+    public void speed() {
+        System.out.println("Car Generic Speed.");
+    }
 }

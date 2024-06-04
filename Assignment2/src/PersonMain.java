@@ -1,11 +1,10 @@
-
-public class InheritanceExampleMain {
+public class PersonMain {
 
 	public static void main(String[] args) {
 
 		// Creating Objects
 		Teacher teacher = new Teacher("Arvind", 35);
-		Employeee emp = new Employeee("Aru", 37);
+		Employeee emp = new Employeee("Arun", 37);
 		PermanentEmployee permanentEmployee = new PermanentEmployee("Shubham", 45);
 		ContractEmployee contractEmployee = new ContractEmployee("Ritik", 34);
 

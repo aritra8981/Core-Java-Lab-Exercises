@@ -1,12 +1,16 @@
-
+//Extending the Employeee class.
 public class PermanentEmployee extends Employeee {
 
-	public PermanentEmployee(String name, int age) {
-		super(name, age);
-	}
+    
+    //Constructor for PermanentEmployee objects.
+    public PermanentEmployee(String name, int age) {
+        super(name, age);
+    }
 
-	public void myProfession() {
-		System.out.println(name + " is a Permanent Employee.");
-	}
+    
+    //Prints the profession of the permanent employee.
+    public void myProfession() {
+        System.out.println(name + " is a Permanent Employee.");
+    }
 
 }

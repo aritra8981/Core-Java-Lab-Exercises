@@ -1,8 +1,9 @@
-
+// Rectangle class representing a specific type of shape - a rectangle
 public class Rectangle extends Shape {
-
-	public void draw() {
-		System.out.println("This is a Rectangle.");
-	}
-
+    
+    // Override the draw() method from the Shape class
+    @Override
+    public void draw() {
+        System.out.println("This is a rectangle.");
+    }
 }

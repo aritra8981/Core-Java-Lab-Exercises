@@ -1,16 +1,17 @@
-
 public class Person {
-	String name;
-	int age;
+    // Attributes of the Person class
+    String name;
+    int age;
 
-	public Person(String name, int age) {
-		this.name = name;
-		this.age = age;
-	}
+    // Constructor to initialize the Person object
+    public Person(String name, int age) {
+        this.name = name; // Set the name of the person
+        this.age = age;   // Set the age of the person
+    }
 
-	public void display() {
-		System.out.println("Name Of Person: " + name);
-		System.out.println("Age Of Person: " + age);
-
-	}
+    // Method to display the details of the Person
+    public void display() {
+        System.out.println("Name Of Person: " + name); // Print the person's name
+        System.out.println("Age Of Person: " + age);   // Print the person's age
+    }
 }

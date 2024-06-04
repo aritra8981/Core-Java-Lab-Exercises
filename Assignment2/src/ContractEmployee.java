@@ -1,12 +1,16 @@
-
+//Extending the Employeee class.
 public class ContractEmployee extends Employeee {
 
-	public ContractEmployee(String name, int age) {
-		super(name, age);
-	}
+   
+    //Constructor for ContractEmployee objects.
+    public ContractEmployee(String name, int age) {
+        super(name, age);
+    }
 
-	public void myProfession() {
-		System.out.println(name + " is a Contract Employee.");
-	}
+    
+	//Prints the profession of the contract employee.
+    public void myProfession() {
+        System.out.println(name + " is a Contract Employee.");
+    }
 
 }
